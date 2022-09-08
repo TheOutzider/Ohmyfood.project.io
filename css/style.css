@@ -100,6 +100,10 @@ header {
     margin-left: 8%;
     border-radius: 20px;
 }
+.fonctionbloc.active {
+    background-color: #F5EDFF;
+}
+
 .textbloc {
     
     display: flex;
@@ -115,6 +119,9 @@ header {
     color: grey;
     padding-right: 50px;
 }
+.bi.bi-shop.active{
+    color: #9356DC;
+}
 .nbbloc {
     margin: 33px 0 0 -15px;
     background-color: #9356DC;
@@ -125,25 +132,26 @@ header {
     padding-top: 3px;
     color: white;
 }
-.menus {
-    height: 2000px;
+.rest {
+    height: 1450px;
     width: 100%;
     background-color: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 25px 0 25px 0;
 }
-/* bloc copié */
-.pop_image_aa {
+.rest_image {
     width: 90%;
     margin-left: 5%;
-    padding-top: 5%;
-    
 }
-.image_aa {
+.image_a {
     box-shadow: 0 4px 4px lightgray;
     border-radius: 25px;
 }
-.image_aa .image{
+.image_a .image{
     display: inline-block;
-    height: 300px;
+    height: 200px;
     width: 100%;
     background-position: center;
     background-size: cover;
@@ -153,17 +161,89 @@ header {
     height: 100px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     padding-left: 5%;
 }
-  .titlee {
+  .rest_title {
     font-weight: bold;
-    font-size: 11px;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
-  .image.imagee {
+.image.imagea {
     background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
 }
-.menus a{
+.image.imageb {
+    background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+}
+.image.imagec {
+    background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+}
+.image.imaged {
+    background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+}
+.rest a{
     display: contents;
     text-decoration: none;
+    color: black;
+}
+.bi.bi-heart {
+    font-size: 35px;
+    text-align: right;
+    width: 49%;
+    height: 50px;
+    margin: 3.5%;
+}
+.bi.bi-heart:active {
+    background-color: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(157,89,220,1) 0%, rgba(236,115,218,1) 100%);
+    transition: 0.2s;
+}
+.rest_description {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+footer {
+    height: 300px;
+    background-color:#353535 ;
+    padding: 30px;
+}
+.logo__bot {
+    font-family: shrikhand;
+    color: white;
+    font-size: 25px;
+}
+.foot_text {
+    color: white;
+    font-weight: bold;
+}
+.bi.bi-egg-fried, .bi.bi-building{
+    color: white;
+    margin-right: 10px;
+}
+.menubot {
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.menubot a{
+    text-decoration: none;
+    color: white;
+    
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    height: 45px;
+}
+ul li{
+    padding-top: 5px;
+}
+.submit, .business{
+    display: flex;
+    flex-direction: row;
 }
