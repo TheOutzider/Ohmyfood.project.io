@@ -1,5 +1,5 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
-
+@import url('http://fonts.cdnfonts.com/css/shrikhand');
 * {
     scroll-behavior: smooth;
     margin: 0;
@@ -19,7 +19,7 @@ header {
     text-align: center;
     padding-top: 23px;
     font-size: 250%;
-    font-family: shrikhand;
+    font-family: Shrikhand;
 }
 .exploration {
     display: flex;
@@ -163,6 +163,7 @@ header {
     flex-direction: column;
     justify-content: center;
     padding-left: 5%;
+    width: 190px;
 }
   .rest_title {
     font-weight: bold;
@@ -209,9 +210,10 @@ footer {
     padding: 30px;
 }
 .logo__bot {
-    font-family: shrikhand;
+    font-family: 'Shrikhand';
     color: white;
     font-size: 25px;
+    margin-bottom: 25px;
 }
 .foot_text {
     color: white;
@@ -246,4 +248,87 @@ ul li{
 .submit, .business{
     display: flex;
     flex-direction: row;
+}
+/* Menus **/
+.image.banner {
+    background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    width: 500px;
+    height: 350px;
+    width: 100%;
+}
+.rest_info {
+    height: 150px;
+    width: 100%;
+    background-color: #F6F6F6;
+    border-radius: 35px 35px 0 0;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: space-between;
+}
+.restbanner {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.restname {
+    width: 550px;
+    margin-top: 30px;
+    margin-left: 5%;
+    font-family: shrikhand;
+    font-size: 40px;    
+}
+.rest_info .bi.bi-heart{
+    width: 10%;
+    margin: 35px 10% 0 0;
+}
+.mainrest {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color:#F6F6F6;
+    height: 1500px;
+}
+.cattitle {
+    font-size: 25px;
+    padding-left: 5%;
+}
+.titleborder {
+    border-bottom: solid 4px #99E2D0;
+    width: 61px;
+    margin-left: 5%;
+}
+.cat {
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.dish {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 5%;
+    padding: 0 3% 0 5%;
+    background-color: white;
+    border-radius: 25px;
+    height: 80px;
+    box-shadow: 0 4px 4px lightgray;
+
+}
+.dishcontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.dishprice {
+    margin: 40px 20px 0 0;
+    font-size: 20px;
+}
+.dishtitle {
+    font-size: 20px;
+    font-weight: bolder;
 }
