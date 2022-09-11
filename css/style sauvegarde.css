@@ -1,0 +1,344 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+@import url('https://fonts.cdnfonts.com/css/shrikhand');
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+}
+header {
+    display: flex;
+    flex-direction: column;
+}
+a {
+    display: contents;
+    text-decoration-style: none;
+    color: black;
+}
+.logo_banner {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+.logo {
+    text-align: center;
+    padding-top: 23px;
+    font-size: 250%;
+    font-family: Shrikhand;
+}
+.exploration {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.localisation {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    background-color: #eee;
+    box-shadow: inset 0px 30px 14px -25px rgba(170, 172, 175, 0.47);
+    justify-content: center;
+}
+.bi.bi-geo-alt-fill {
+    font-size: 19px;
+    margin-right: 15px;
+}
+.location {
+    font-family: "roboto";
+    font-size: 20px;
+}
+.subloc {
+    background-color: #F6F6F6;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: roboto;
+    padding: 25px;
+}
+.title {
+    font-size: 35px;
+    text-align: center;
+    padding: 0 40px 0 40px;
+    font-weight: bolder;
+}
+.subtitle {
+    font-size: 20px;
+    text-align: center;
+    padding: 0 40px 0 40px;
+}
+.explore {
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(157,89,220,1) 0%, rgba(236,115,218,1) 100%);
+    height: fit-content;
+    width: 60%;
+    padding: 15px;
+    margin-left: 20%;
+    border-radius: 35px;
+    color: white;
+    font-size: larger;
+    box-shadow: 0px 10px 20px -6px #A8A9AD;
+}
+.title__nav {
+    font-size: 35px;
+    font-weight: bolder;
+    margin: 50px 0 0 25px;
+    text-align: left;
+}
+.navigation {
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+}
+.allblocks {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.fonctionbloc {
+    display: flex;
+    flex-direction: row;
+    background-color: #F6F6F6;
+    box-shadow: 0px 10px 20px -6px #A8A9AD;
+    height: 90px;
+    width: 85%;
+    margin-left: 8%;
+    border-radius: 20px;
+}
+.fonctionbloc.active {
+    background-color: #F5EDFF;
+}
+
+.textbloc {
+    
+    display: flex;
+    flex-direction: row;
+    padding-top: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    justify-content: center;
+}
+.bi.bi-phone, .bi.bi-list-check, .bi.bi-shop {
+    font-size: 30px;
+    margin: 26px 0px 0 10%;
+    color: grey;
+    padding-right: 50px;
+}
+.bi.bi-shop.active{
+    color: #9356DC;
+}
+.nbbloc {
+    margin: 33px 0 0 -15px;
+    background-color: #9356DC;
+    height: 28px;
+    width: 28px;
+    text-align: center;
+    border-radius: 14px;
+    padding-top: 3px;
+    color: white;
+}
+.rest {
+    height: 1450px;
+    width: 100%;
+    background-color: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 25px 0 25px 0;
+}
+.rest_image {
+    width: 90%;
+    margin-left: 5%;
+}
+.image_a {
+    box-shadow: 0 4px 4px lightgray;
+    border-radius: 25px;
+}
+.image_a .image{
+    display: inline-block;
+    height: 200px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px 25px 0 0;
+}
+.image_description_a {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5%;
+    width: 190px;
+}
+  .rest_title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+.image.imagea {
+    background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+}
+.image.imageb {
+    background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+}
+.image.imagec {
+    background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+}
+.image.imaged {
+    background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+}
+.rest a{
+    display: contents;
+    text-decoration: none;
+    color: black;
+}
+.bi.bi-heart {
+    font-size: 35px;
+    text-align: right;
+    width: 49%;
+    height: 50px;
+    margin: 3.5%;
+}
+.bi.bi-heart:active {
+    background-color: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(157,89,220,1) 0%, rgba(236,115,218,1) 100%);
+    transition: 0.2s;
+}
+.rest_description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+footer {
+    height: 300px;
+    background-color:#353535 ;
+    padding: 30px;
+}
+.logo__bot {
+    font-family: 'Shrikhand';
+    color: white;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+.foot_text {
+    color: white;
+    font-weight: bold;
+}
+.bi.bi-egg-fried, .bi.bi-building{
+    color: white;
+    margin-right: 10px;
+}
+.menubot {
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.menubot a{
+    text-decoration: none;
+    color: white;
+    
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    height: 45px;
+}
+ul li{
+    padding-top: 5px;
+}
+.submit, .business{
+    display: flex;
+    flex-direction: row;
+}
+/* Menus **/
+.image.banner {
+    background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    width: 500px;
+    height: 350px;
+    width: 100%;
+}
+.rest_info {
+    height: 150px;
+    width: 100%;
+    background-color: #F6F6F6;
+    border-radius: 35px 35px 0 0;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: space-between;
+}
+.restbanner {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.restname {
+    width: 550px;
+    margin-top: 30px;
+    margin-left: 5%;
+    font-family: shrikhand;
+    font-size: 40px;    
+}
+.rest_info .bi.bi-heart{
+    width: 10%;
+    margin: 35px 10% 0 0;
+}
+.mainrest {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color:#F6F6F6;
+    height: 1500px;
+}
+.cattitle {
+    font-size: 25px;
+    padding-left: 5%;
+}
+.titleborder {
+    border-bottom: solid 4px #99E2D0;
+    width: 61px;
+    margin-left: 5%;
+}
+.cat {
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.dish {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 5%;
+    padding: 0 3% 0 5%;
+    background-color: white;
+    border-radius: 25px;
+    height: 80px;
+    box-shadow: 0 4px 4px lightgray;
+
+}
+.dishcontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.dishprice {
+    margin: 40px 20px 0 0;
+    font-size: 20px;
+}
+.dishtitle {
+    font-size: 20px;
+    font-weight: bolder;
+}
+.dishsubtitle {
+    text-overflow: ellipsis;
+}
