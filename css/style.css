@@ -105,8 +105,11 @@ a {
     margin-left: 8%;
     border-radius: 20px;
 }
-.fonctionbloc.active {
+.fonctionbloc:hover {
     background-color: #F5EDFF;
+}
+.textbloc:hover {
+    color: #9356DC;
 }
 
 .textbloc {
@@ -124,7 +127,7 @@ a {
     color: grey;
     padding-right: 50px;
 }
-.bi.bi-shop.active{
+.bi.bi-phone:hover, .bi.bi-list-check:hover, .bi.bi-shop:hover{
     color: #9356DC;
 }
 .nbbloc {
@@ -294,7 +297,7 @@ ul li{
 .mainrest {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color:#F6F6F6;
     height: 1500px;
 }
@@ -341,4 +344,38 @@ ul li{
 }
 .dishsubtitle {
     text-overflow: ellipsis;
+}
+@keyframes slideInLeft {
+    0% {
+      transform: translateY(+100%);
+      opacity: 0%;
+    }
+    50% {
+        opacity: 30%;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 100%;
+    }
+  }
+.dish{
+    background-color: #f6f6f6;
+    animation-duration: 1.6s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-name: slideInLeft;
+  }
+.cat {
+        background-color: #f6f6f6;
+        animation-duration: 1.4s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0s;
+        animation-name: slideInLeft;
+}
+.dishtitle, .dishsubtitle, .dishprice{
+    background-color: #f6f6f6;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-name: slideInLeft;
 }
