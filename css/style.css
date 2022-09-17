@@ -322,7 +322,6 @@ ul li{
     justify-content: space-between;
     width: 90%;
     margin-left: 5%;
-    padding: 0 3% 0 5%;
     background-color: white;
     border-radius: 25px;
     height: 80px;
@@ -378,4 +377,23 @@ ul li{
     animation-timing-function: ease-in-out;
     animation-delay: 0s;
     animation-name: slideInLeft;
+}
+.bi.bi-check-circle {
+    height: 80px;
+    background-color: green;
+    width: 80px;
+    text-align: center;
+    font-size: 40px;
+    color: lightgreen;
+    position: initial;
+    border-radius: 0 25px 25px 0;
+    padding-top: 5%;
+    display: inline-block;
+    display: none;
+}
+.rightcorner {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    width: 150px;
 }
