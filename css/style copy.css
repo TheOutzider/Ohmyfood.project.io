@@ -105,8 +105,11 @@ a {
     margin-left: 8%;
     border-radius: 20px;
 }
-.fonctionbloc.active {
+.fonctionbloc:hover {
     background-color: #F5EDFF;
+}
+.textbloc:hover {
+    color: #9356DC;
 }
 
 .textbloc {
@@ -124,7 +127,7 @@ a {
     color: grey;
     padding-right: 50px;
 }
-.bi.bi-shop.active{
+.bi.bi-phone:hover, .bi.bi-list-check:hover, .bi.bi-shop:hover{
     color: #9356DC;
 }
 .nbbloc {
@@ -294,7 +297,7 @@ ul li{
 .mainrest {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color:#F6F6F6;
     height: 1500px;
 }
@@ -319,7 +322,6 @@ ul li{
     justify-content: space-between;
     width: 90%;
     margin-left: 5%;
-    padding: 0 3% 0 5%;
     background-color: white;
     border-radius: 25px;
     height: 80px;
@@ -330,6 +332,7 @@ ul li{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    margin-left: 3%;
 }
 .dishprice {
     margin: 40px 20px 0 0;
@@ -341,4 +344,88 @@ ul li{
 }
 .dishsubtitle {
     text-overflow: ellipsis;
+}
+@keyframes slideInLeft {
+    0% {
+      transform: translateY(+100%);
+      opacity: 0%;
+    }
+    50% {
+        opacity: 30%;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 100%;
+    }
+  }
+.dish{
+    background-color: #f6f6f6;
+    animation-duration: 1.6s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-name: slideInLeft;
+  }
+.cat {
+        background-color: #f6f6f6;
+        animation-duration: 1.4s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0s;
+        animation-name: slideInLeft;
+}
+.dishtitle, .dishsubtitle, .dishprice{
+    background-color: #f6f6f6;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-name: slideInLeft;
+}
+.bi.bi-check-circle {
+    height: 80px;
+    background-color: green;
+    width: 80px;
+    text-align: center;
+    font-size: 40px;
+    color: lightgreen;
+    position: initial;
+    border-radius: 0 25px 25px 0;
+    padding-top: 5%;
+    display: inline-block;
+    display: none;
+}
+.rightcorner {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    width: 150px;
+}
+@keyframes load {
+    0% {
+        opacity: 100%;
+      }
+    50% {
+        opacity: 90%;
+    }
+      100% {
+        opacity: 0%;
+        display: none;
+      }
+}
+
+.loading {
+    z-index: 2;
+    height: 240%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    animation-duration: 1.6s;
+    animation-timing-function: ease-in-out;
+    animation-name: load;
+    animation-iteration-count: 1
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+.loader {
+padding-top: 50%;
 }

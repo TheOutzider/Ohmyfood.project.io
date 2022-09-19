@@ -332,6 +332,7 @@ ul li{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    margin-left: 3%;
 }
 .dishprice {
     margin: 40px 20px 0 0;
@@ -396,4 +397,35 @@ ul li{
     flex-direction: row;
     justify-content: right;
     width: 150px;
+}
+@keyframes load {
+    0% {
+        opacity: 100%;
+      }
+    50% {
+        opacity: 90%;
+    }
+      100% {
+        opacity: 0%;
+        display: none;
+      }
+}
+
+.loading {
+    z-index: 2;
+    height: 240%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    animation-duration: 1.6s;
+    animation-timing-function: ease-in-out;
+    animation-name: load;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+.loader {
+padding-top: 50%;
 }
