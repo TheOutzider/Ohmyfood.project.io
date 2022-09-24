@@ -1,0 +1,301 @@
+@media screen and (max-width: 820px) {
+  @import url("https://fonts.cdnfonts.com/css/shrikhand");
+  @import url("https://fonts.cdnfonts.com/css/roboto");
+  @-webkit-keyframes load {
+    0% {
+      opacity: 100%;
+    }
+    50% {
+      opacity: 90%;
+    }
+    100% {
+      opacity: 0%;
+      visibility: none;
+      z-index: -1;
+    }
+  }
+  @keyframes load {
+    0% {
+      opacity: 100%;
+    }
+    50% {
+      opacity: 90%;
+    }
+    100% {
+      opacity: 0%;
+      visibility: none;
+      z-index: -1;
+    }
+  }
+  * {
+    font-family: "roboto", "shrikland" sans-serif;
+    scroll-behavior: smooth;
+    margin: 0;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    display: contents;
+    -webkit-text-decoration-style: none;
+            text-decoration-style: none;
+    color: #000000;
+  }
+  .loading {
+    z-index: 2;
+    height: 240%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    -webkit-animation-duration: 1.6s;
+            animation-duration: 1.6s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-name: load;
+            animation-name: load;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .loader {
+    padding-top: 50%;
+  }
+  .logobanner {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+  }
+  .logo {
+    text-align: center;
+    padding-top: 23px;
+    font-size: 250%;
+    font-family: shrikland;
+  }
+  .exploration {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .localisation {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    background-color: #EEE;
+    box-shadow: inset 0px 30px 14px -25px rgba(170, 172, 175, 0.47);
+    justify-content: center;
+  }
+  .bi.bi-geo-alt-fill {
+    font-size: 19px;
+    margin-right: 15px;
+  }
+  .location {
+    font-size: 20px;
+  }
+  .subloc {
+    background-color: #F6F6F6;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 25px;
+  }
+  .atitle {
+    font-size: 35px;
+    text-align: center;
+    padding: 0 40px 0 40px;
+    font-weight: bolder;
+  }
+  .subtitle {
+    font-size: 20px;
+    text-align: center;
+    padding: 0 40px 0 40px;
+  }
+  .explore {
+    background: linear-gradient(0deg, rgb(2, 0, 36) 0%, rgb(157, 89, 220) 0%, rgb(236, 115, 218) 100%);
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 60%;
+    padding: 15px;
+    margin-left: 20%;
+    border-radius: 35px;
+    color: white;
+    font-size: larger;
+    box-shadow: 0px 10px 20px -6px #a8a9ad;
+  }
+  .title__nav {
+    font-size: 35px;
+    font-weight: bolder;
+    margin: 50px 0 0 25px;
+    text-align: left;
+  }
+  .navigation {
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+  }
+  .allblocks {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .fonctionbloc {
+    display: flex;
+    flex-direction: row;
+    background-color: #f6f6f6;
+    box-shadow: 0px 10px 20px -6px #a8a9ad;
+    height: 90px;
+    width: 85%;
+    margin-left: 8%;
+    border-radius: 20px;
+  }
+  .textbloc {
+    display: flex;
+    flex-direction: row;
+    padding-top: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    justify-content: center;
+  }
+  .bi.bi-phone,
+.bi.bi-list-check,
+.bi.bi-shop {
+    font-size: 30px;
+    margin: 26px 0px 0 10%;
+    color: grey;
+    padding-right: 50px;
+  }
+  .nbbloc {
+    margin: 33px 0 0 -15px;
+    background-color: #9356dc;
+    height: 28px;
+    width: 28px;
+    text-align: center;
+    border-radius: 14px;
+    padding-top: 3px;
+    color: white;
+  }
+  .rest {
+    height: 1450px;
+    width: 100%;
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 25px 0 25px 0;
+  }
+  .rest_image {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .image_a {
+    box-shadow: 0 4px 4px lightgray;
+    border-radius: 25px;
+  }
+  .image.imagea {
+    display: inline-block;
+    height: 200px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px 25px 0 0;
+  }
+  .image_description_a {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5%;
+    width: 190px;
+  }
+  .rest_title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    width: 200px;
+  }
+  .image.imagea {
+    background-image: url(../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  }
+  .image.imageb {
+    background-image: url(../../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+  }
+  .image.imagec {
+    background-image: url(../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  }
+  .image.imaged {
+    background-image: url(../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  }
+  .bi.bi-heart {
+    font-size: 35px;
+    text-align: right;
+    width: 49%;
+    height: 50px;
+    margin: 3.5%;
+  }
+  .bi.bi-heart:active {
+    background-color: linear-gradient(0deg, rgb(2, 0, 36) 0%, rgb(157, 89, 220) 0%, rgb(236, 115, 218) 100%);
+    transition: 0.2s;
+  }
+  .rest_description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+  }
+  footer {
+    height: 300px;
+    background-color: #353535;
+    padding: 30px;
+  }
+  .logo__bot {
+    font-family: "Shrikhand", sans-serif;
+    color: white;
+    font-size: 25px;
+    margin-bottom: 25px;
+  }
+  .foot_text {
+    color: white;
+    font-weight: bold;
+  }
+  .bi.bi-egg-fried,
+.bi.bi-building {
+    color: white;
+    margin-right: 10px;
+  }
+  .menubot {
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .menubot > a {
+    text-decoration: none;
+    color: white;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    height: 45px;
+  }
+  ul > li {
+    padding-top: 5px;
+  }
+  .submit,
+.business {
+    display: flex;
+    flex-direction: row;
+  }
+  /* MENU **/
+}/*# sourceMappingURL=style.css.map */
