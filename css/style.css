@@ -418,7 +418,7 @@ ul li{
     }
 }
 .bi.bi-heart-fill:active {
-    animation: fill .5s ease;
+    animation: fill .5s ease both;
 }
 .dish:hover .bi.bi-check-circle {
         animation: check .5s ease both
