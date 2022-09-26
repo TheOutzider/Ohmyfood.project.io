@@ -15,6 +15,11 @@ a {
     text-decoration-style: none;
     color: black;
 }
+.logo_banner_menu {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
 .logo_banner {
     height: 100px;
     display: flex;
@@ -23,8 +28,17 @@ a {
 .logo {
     text-align: center;
     padding-top: 23px;
-    font-size: 250%;
+    width: 275px;
     font-family: Shrikhand;
+}
+.cent{
+    width: 80px;
+    height: 80px;
+}
+.bi.bi-arrow-left-short {
+    width: 80px;
+    height: 80px;
+    font-size: 60px;
 }
 .exploration {
     display: flex;
@@ -165,6 +179,9 @@ a {
 .image_a {
     box-shadow: 0 4px 4px lightgray;
     border-radius: 25px;
+}
+.image_a:hover {
+    box-shadow: 0 4px 4px grey;
 }
 .image_a .image{
     display: inline-block;
@@ -339,6 +356,8 @@ ul li{
     flex-direction: column;
     justify-content: space-evenly;
     margin-left: 3%;
+    overflow-y: hidden;
+    white-space: nowrap;
 }
 .dishprice {
     margin: 40px 20px 0 0;
@@ -370,6 +389,7 @@ ul li{
     animation-timing-function: ease-in-out;
     animation-delay: 0s;
     animation-name: slideInLeft;
+    cursor: pointer;
   }
 .cat {
         background-color: #f6f6f6;
@@ -384,19 +404,27 @@ ul li{
     animation-timing-function: ease-in-out;
     animation-delay: 0s;
     animation-name: slideInLeft;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .bi.bi-check-circle {
-    height: 80px;
-    background-color: #99E2D0;
-    text-align: center;
     font-size: 40px;
     color: white;
+    overflow: hidden;
+    width: 0px;
+    opacity: 0;
+    margin-left: 25%;
+}
+.box {
+    height: 80px;
+    background-color: #99E2D0;
     position: initial;
     border-radius: 0 25px 25px 0;
     padding-top: 5%;
     overflow: hidden;
     width: 0px;
     opacity: 0;
+    display: flex;
 }
 @keyframes check {
     0%{
@@ -408,19 +436,38 @@ ul li{
         opacity: 100%;
     }
 }
-@keyframes fill {
-    0%{
-        
+@keyframes rotate {
+    from {
+        width: 0;
+        rotate: 0deg;
+        opacity: 0;
     }
-    100%{
+    to{
+        width: 80px;
+        rotate: 360deg;
+        opacity: 100%;
+    }
+}
+
+.dish:hover .bi.bi-check-circle{
+    animation: rotate .5s ease both;
+}
+@keyframes fill {
+    from {
+        opacity: 5%;
+        color: red;
+    }
+    to {
         opacity: 100%;
         color: red;
     }
+    
 }
-.bi.bi-heart-fill:active {
-    animation: fill .5s ease both;
+.bi.bi-heart-fill:hover {
+    animation: fill 1.5s ease both;
 }
-.dish:hover .bi.bi-check-circle {
+
+.dish:hover .box {
         animation: check .5s ease both
 }
 .rightcorner {
