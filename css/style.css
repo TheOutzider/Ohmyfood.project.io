@@ -1,5 +1,6 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 @import url('https://fonts.cdnfonts.com/css/shrikhand');
+
 * {
     scroll-behavior: smooth;
     margin: 0;
@@ -81,21 +82,144 @@ a {
     text-align: center;
     padding: 0 40px 0 40px;
 }
-.explore {
-    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(157,89,220,1) 0%, rgba(236,115,218,1) 100%);
-    height: fit-content;
-    width: 60%;
-    padding: 15px;
-    margin-left: 20%;
-    border-radius: 35px;
+@keyframes load {
+    0% {
+        opacity: 100%;
+      }
+    50% {
+        opacity: 90%;
+    }
+      100% {
+        opacity: 0%;
+        visibility: none;
+        z-index: -1;
+      }
+}
+
+.loading {
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    animation-duration: 1.6s;
+    animation-timing-function: ease-in-out;
+    animation-name: load;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+.loader {
+padding-top: 50%;
+}
+footer {
+    height: 300px;
+    background-color:#353535 ;
+    padding: 30px;
+}
+.logo__bot {
+    font-family: 'Shrikhand';
     color: white;
-    font-size: larger;
-    box-shadow: 0px 10px 20px -6px #A8A9AD;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+.foot_text {
+    color: white;
+    font-weight: bold;
+}
+.bi.bi-egg-fried, .bi.bi-building{
+    color: white;
+    margin-right: 10px;
+}
+.menubot {
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.menubot a{
+    text-decoration: none;
+    color: white;
+    
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    height: 45px;
+}
+ul li{
+    padding-top: 5px;
+}
+.submit, .business{
+    display: flex;
+    flex-direction: row;
+}
+@keyframes check {
+    0%{
+        width: 0;
+        opacity: 0;
+    }
+    100%{
+        width: 80px;
+        opacity: 100%;
+    }
+}
+@keyframes rotate {
+    from {
+        width: 0;
+        rotate: 0deg;
+        opacity: 0;
+    }
+    to{
+        width: 80px;
+        rotate: 360deg;
+        opacity: 100%;
+    }
+}
+
+.dish:hover .bi.bi-check-circle{
+    animation: rotate .5s ease both;
+}
+@keyframes fill {
+    from {
+        opacity: 5%;
+        color: red;
+    }
+    to {
+        opacity: 100%;
+        color: red;
+    }
+    
+}
+.bi.bi-heart-fill:hover {
+    animation: fill 1.5s ease both;
+}
+
+.dish:hover .box {
+        animation: check .5s ease both
+}
+
+@media screen and (max-width: 996px) {
+.explore {
+        background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(157,89,220,1) 0%, rgba(236,115,218,1) 100%);
+        height: fit-content;
+        width: 60%;
+        padding: 15px;
+        margin-left: 20%;
+        border-radius: 35px;
+        color: white;
+        font-size: larger;
+        box-shadow: 0px 10px 20px -6px #A8A9AD;
 }
 .title__nav {
     font-size: 35px;
     font-weight: bolder;
-    margin: 50px 0 0 25px;
+    margin: 50px 0 25px 25px;
     text-align: left;
 }
 .navigation {
@@ -170,7 +294,6 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 25px 0 25px 0;
 }
 .rest_image {
     width: 90%;
@@ -426,50 +549,7 @@ ul li{
     opacity: 0;
     display: flex;
 }
-@keyframes check {
-    0%{
-        width: 0;
-        opacity: 0;
-    }
-    100%{
-        width: 80px;
-        opacity: 100%;
-    }
-}
-@keyframes rotate {
-    from {
-        width: 0;
-        rotate: 0deg;
-        opacity: 0;
-    }
-    to{
-        width: 80px;
-        rotate: 360deg;
-        opacity: 100%;
-    }
-}
 
-.dish:hover .bi.bi-check-circle{
-    animation: rotate .5s ease both;
-}
-@keyframes fill {
-    from {
-        opacity: 5%;
-        color: red;
-    }
-    to {
-        opacity: 100%;
-        color: red;
-    }
-    
-}
-.bi.bi-heart-fill:hover {
-    animation: fill 1.5s ease both;
-}
-
-.dish:hover .box {
-        animation: check .5s ease both
-}
 .rightcorner {
     display: flex;
     flex-direction: row;
@@ -477,35 +557,324 @@ ul li{
     width: 150px;
 }
 
-@keyframes load {
-    0% {
-        opacity: 100%;
-      }
-    50% {
-        opacity: 90%;
-    }
-      100% {
-        opacity: 0%;
-        visibility: none;
-        z-index: -1;
-      }
-}
 
-.loading {
-    z-index: 2;
-    height: 240%;
+}
+@media screen and (min-width: 996px) {  
+    .explore {
+        background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(157,89,220,1) 0%, rgba(236,115,218,1) 100%);
+        padding: 11px;
+        border-radius: 35px;
+        color: white;
+        font-size: larger;
+        box-shadow: 0px 10px 20px -6px #A8A9AD;
+        margin: 0 40% 0 40%;
+        width: 375px;
+        height: 50px;
+    }
+    .title__nav {
+        font-size: 35px;
+        font-weight: bolder;
+        margin: 50px 0 25px 25px;
+        text-align: center;
+        width: 100%;
+        height: 50px;
+    }
+    .navigation {
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+    }
+    .allblocks {
+        height: 500px;
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+        padding: 30px;
+        padding: 0 25px 0 25px;
+    }
+    .subloc {
+        height: 250px;
+    }
+    .fonctionbloc {
+        display: flex;
+        flex-direction: row;
+        background-color: #F6F6F6;
+        box-shadow: 0px 10px 20px -6px #A8A9AD;
+        height: 90px;
+        width: 85%;
+        border-radius: 50px;
+        margin: 0 1% 0 2%;
+    }
+    .fonctionbloc:hover {
+        background-color: #F5EDFF;
+    }
+    .fonctionbloc:hover .textbloc{
+        color: #9356DC;
+    }
+    .fonctionbloc:hover .bi.bi-list-check{
+        color: #9356DC;
+    }
+    .fonctionbloc:hover .bi.bi-shop{
+        color: #9356DC;
+    }
+    .fonctionbloc:hover .bi.bi.bi-phone{
+        color: #9356DC;
+    }
+    
+    .textbloc {
+    
+        display: flex;
+        flex-direction: row;
+        padding-top: 35px;
+        font-size: 18px;
+        font-weight: bold;
+        justify-content: center;
+    }
+    .bi.bi-phone, .bi.bi-list-check, .bi.bi-shop {
+        font-size: 30px;
+        margin: 26px 0px 0 10%;
+        color: grey;
+        padding-right: 5%;
+    }
+    .bi.bi-phone:hover, .bi.bi-list-check:hover, .bi.bi-shop:hover{
+        color: #9356DC;
+    }
+    .nbbloc {
+        margin: 33px 0 0 -15px;
+        background-color: #9356DC;
+        height: 28px;
+        width: 28px;
+        text-align: center;
+        border-radius: 14px;
+        padding-top: 3px;
+        color: white;
+    }
+    .rest {
+        height: 950px;
+        width: 100%;
+        background-color: #F6F6F6;
+        padding: 25px 0 25px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .rest_image {
+        width: 45%;
+        margin: 0 2% 2% 2%;
+        height: 250px;
+    }
+    .image_a {
+        box-shadow: 0 4px 4px lightgray;
+        border-radius: 25px;
+    }
+    .image_a:hover {
+        box-shadow: 0 4px 4px grey;
+    }
+    .image_a .image{
+        display: inline-block;
+        height: 200px;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        border-radius: 25px 25px 0 0;
+    }
+    .image_description_a {
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 5%;
+        width: 190px;
+    }
+      .rest_title {
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 10px;
+        width: 200px;
+    }
+    .image.imagea {
+        background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    }
+    .image.imageb {
+        background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+    }
+    .image.imagec {
+        background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+    }
+    .image.imaged {
+        background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+    }
+    .rest a{
+        display: contents;
+        text-decoration: none;
+        color: black;
+    }
+    .bi.bi-heart-fill {
+        font-size: 35px;
+        text-align: right;
+        width: 49%;
+        height: 50px;
+        margin: 3.5%;
+        color: #DDDDDD;
+    }
+    .rest_description {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+    }
+    /* Menus **/
+.image.banner {
+    background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    width: 500px;
+    height: 350px;
     width: 100%;
-    background-color: white;
-    position: absolute;
+}
+.rest_info {
+    height: 150px;
+    width: 100%;
+    background-color: #F6F6F6;
+    border-radius: 35px 35px 0 0;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    position: absolute;
+    justify-content: space-between;
+}
+.restbanner {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.restname {
+    width: 550px;
+    margin-top: 30px;
+    margin-left: 5%;
+    font-family: shrikhand;
+    font-size: 40px;    
+}
+.rest_info .bi.bi-heart-fill{
+    width: 10%;
+    margin: 35px 10% 0 0;
+}
+.mainrest {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #F6F6F6;
+    height: 882px;
+    flex-wrap: wrap;
+}
+.cattitle {
+    font-size: 25px;
+    padding-left: 5%;
+}
+.titleborder {
+    border-bottom: solid 4px #99E2D0;
+    width: 300px;
+    margin-left: 5%;
+}
+.cat {
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+.dish {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 45%;
+    margin-left: 5%;
+    border-radius: 25px;
+    height: 80px;
+    box-shadow: 0 4px 4px lightgray;    
+}
+.dishcontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 3%;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+.dishprice {
+    margin: 40px 20px 0 0;
+    font-size: 20px;
+}
+.dishtitle {
+    font-size: 20px;
+    font-weight: bolder;
+}
+.dishsubtitle {
+    text-overflow: ellipsis;
+}
+@keyframes slideInLeft {
+    0% {
+      transform: translateY(+100%);
+      opacity: 0%;
+    }
+    50% {
+        opacity: 30%;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 100%;
+    }
+  }
+.dish{
+    background-color: #FFF;
     animation-duration: 1.6s;
     animation-timing-function: ease-in-out;
-    animation-name: load;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
+    animation-delay: 0s;
+    animation-name: slideInLeft;
+    cursor: pointer;
+  }
+.cat {
+        background-color: #f6f6f6;
+        animation-duration: 1.4s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0s;
+        animation-name: slideInLeft;
 }
-.loader {
-padding-top: 50%;
+.dishtitle, .dishsubtitle, .dishprice{
+    background-color: #FFFF;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-name: slideInLeft;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.bi.bi-check-circle {
+    font-size: 40px;
+    color: white;
+    overflow: hidden;
+    width: 0px;
+    opacity: 0;
+    margin-left: 25%;
+}
+.box {
+    height: 80px;
+    background-color: #99E2D0;
+    position: initial;
+    border-radius: 0 25px 25px 0;
+    padding-top: 5%;
+    overflow: hidden;
+    width: 0px;
+    opacity: 0;
+    display: flex;
+}
+
+.rightcorner {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    width: 150px;
+}
+
 }
