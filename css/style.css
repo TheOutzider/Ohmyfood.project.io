@@ -186,13 +186,16 @@ ul li{
 @keyframes fill {
     from {
         opacity: 5%;
-        color: red;
+        background: -webkit-linear-gradient(90deg, rgba(205,105,219,1) 50%, rgba(157,89,220,1) 100%);  
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
     to {
         opacity: 100%;
-        color: red;
-    }
-    
+        background: -webkit-linear-gradient(90deg, rgba(205,105,219,1) 50%, rgba(157,89,220,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+} 
 }
 .bi.bi-heart-fill:hover {
     animation: fill 1.5s ease both;
